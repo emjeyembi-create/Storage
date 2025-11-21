@@ -1,10 +1,14 @@
 <?php
-
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('portfolio.Balatbat');
-
-    Route::get('/admin.login', function () {
-    return view('Authentication.login');
 });
+Route::get('register', [AuthController::class,'showRegister'])->name ('register.form');
+Route::post('register', [AuthController::class,'register'])->name('register');
+Route::post('login', [AuthController::class,'showlogin'])->name('login.form');
+Route::post('login', [AuthController::class,'login'])->name('login');
+Route::get('dashboard');
+return view('dashboard');
+})->
