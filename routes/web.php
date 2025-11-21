@@ -11,4 +11,3 @@ Route::post('login', [AuthController::class,'showlogin'])->name('login.form');
 Route::post('login', [AuthController::class,'login'])->name('login');
 Route::get('dashboard');
 return view('dashboard');
-})->
