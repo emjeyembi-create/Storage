@@ -37,7 +37,7 @@
     <div class="row align-items-center">
       
     <div class="col-md-6 text-center">
-    <img src="https://i.imgur.com/T0GVM2w.png" alt="Profile Picture"style="width: 300px; height: 300px; border-radius: 50%;">
+    <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/Home.png" alt="Profile Picture"style="width: 300px; height: 300px; border-radius: 50%;">
   </div>
 
       <div class="col-md-6 text-center text-md-start">
@@ -82,7 +82,7 @@
   <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
     <div class="col">
       <div class="card h-100 bg-transparent border-0">
-        <img src="https://i.imgur.com/UYiEDWp.png"
+        <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/ledlights.png"
              class="card-img-top"
              alt="LedLightsDanceChampion"
              style="height: 250px; object-fit: cover; border-radius: 0; background: none;">
@@ -95,7 +95,7 @@
 
     <div class="col">
       <div class="card h-100 bg-transparent border-0">
-        <img src="https://i.imgur.com/jM7tNjJ.jpeg"
+        <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/dodgeball.jpeg"
              class="card-img-top"
              alt="DodgeBallChampion"
              style="height: 250px; object-fit: cover; border-radius: 0; background: none;">
@@ -108,7 +108,7 @@
 
     <div class="col">
       <div class="card h-100 bg-transparent border-0">
-        <img src="https://i.imgur.com/vNm6h8t.png"
+        <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/agawanpanyo.png"
              class="card-img-top"
              alt="3rdPlaceAgawanPanyo"
              style="height: 250px; object-fit: cover; border-radius: 0; background: none;">
@@ -121,7 +121,7 @@
 
     <div class="col">
       <div class="card h-100 bg-transparent border-0">
-        <img src="https://i.imgur.com/xp4rF1i.png"
+        <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/bass.png"
              class="card-img-top"
              alt="InterestBassGuitar"
              style="height: 250px; object-fit: cover; border-radius: 0; background: none;">
@@ -134,7 +134,7 @@
 
     <div class="col">
       <div class="card h-100 bg-transparent border-0">
-        <img src="https://i.imgur.com/513T3UW.png"
+        <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/gaming.png"
              class="card-img-top"
              alt="InterestGaming"
              style="height: 250px; object-fit: cover; border-radius: 0; background: none;">
@@ -147,7 +147,7 @@
 
     <div class="col">
       <div class="card h-100 bg-transparent border-0">
-        <img src="https://i.imgur.com/VqhVcSG.png"
+        <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/art.png"
              class="card-img-top"
              alt="InterestTraditionalArt"
              style="height: 250px; object-fit: cover; border-radius: 0; background: none;">
@@ -167,7 +167,7 @@
       
       <div class="col-md-6">
         <div class="card h-100 bg-transparent border-0">
-          <img src="https://i.imgur.com/wun2Deq.png" class="card-img-top" alt="Project 1" style="height: 400px; object-fit: cover;">
+          <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/foodordering.png" class="card-img-top" alt="Project 1" style="height: 400px; object-fit: cover;">
           <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px;">
             <h5 class="card-title" style="color: white;">Prototype</h5>
             <p class="card-text" style="color: white;">Food Ordering Application</p>
@@ -178,7 +178,7 @@
       
       <div class="col-md-6">
         <div class="card h-100 bg-transparent border-0">
-          <img src="https://i.imgur.com/a6NX2Mo.png" class="card-img-top" alt="Project 2" style="height: 400px; object-fit: cover;">
+          <img src="https://raw.githubusercontent.com/emjeyembi-create/Storage/63998409103c4cf068655841529e717320f82b11/realestate.png" class="card-img-top" alt="Project 2" style="height: 400px; object-fit: cover;">
           <div class="card-body" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px;">
             <h5 class="card-title" style="color: white;">Prototype</h5>
             <p class="card-text" style="color: white;">Real Estate Website</p>
@@ -306,33 +306,41 @@
 <section id="contact" class="py-5" style="font-family: 'Orbitron', sans-serif;">
   <div class="container">
     <h2 class="text-center mb-4" style="color: #FFD700;"><strong>Contact Me</strong></h2>
-    <form class="mx-auto" style="max-width: 600px; background-color: rgba(0, 0, 0, 0.5); padding: 30px; border-radius: 10px;">
-      
-      <div class="mb-3">
-        <label class="form-label text-light">Name</label>
-        <input type="text" class="form-control" placeholder="Your Name" required>
-      </div>
+    <form class="mx-auto"
+      style="max-width: 600px; background-color: rgba(0, 0, 0, 0.5); padding: 30px; border-radius: 10px;"
+      action="https://formsubmit.co/emjeyembi@gmail.com"
+      method="POST">
 
-      <div class="mb-3">
-        <label class="form-label text-light">Email</label>
-        <input type="email" class="form-control" placeholder="Your Email" required>
-      </div>
+  <input type="hidden" name="_subject" value="New message from your portfolio!">
+  <input type="hidden" name="_template" value="table">
 
-      <div class="mb-3">
-        <label class="form-label text-light">Subject</label>
-        <input type="text" class="form-control" placeholder="Subject" required>
-      </div>
+  <div class="mb-3">
+    <label class="form-label text-light">Name</label>
+    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+  </div>
 
-      <div class="mb-3">
-        <label class="form-label text-light">Message</label>
-        <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-      </div>
+  <div class="mb-3">
+    <label class="form-label text-light">Email</label>
+    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+  </div>
 
-      <button type="submit" class="btn" style="background-color: #FFD700; color: black; font-weight: bold; padding: 15px 30px; border-radius: 50px; width: 100%; text-transform: uppercase; letter-spacing: 2px;">
-        Send Message
-      </button>
+  <div class="mb-3">
+    <label class="form-label text-light">Subject</label>
+    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+  </div>
 
-    </form>
+  <div class="mb-3">
+    <label class="form-label text-light">Message</label>
+    <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+  </div>
+
+  <button type="submit" class="btn"
+          style="background-color: #FFD700; color: black; font-weight: bold; padding: 15px 30px; border-radius: 50px; width: 100%; text-transform: uppercase; letter-spacing: 2px;">
+    Send Message
+  </button>
+</form>
+
+
   </div>
 
   <div class="social-links text-center mt-4">
