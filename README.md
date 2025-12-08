@@ -48,11 +48,11 @@ The contact form sends messages directly to my email through FormSubmit.
 
 
 Acknowledgements
-Bootstrap  
-Google Fonts  
-Devicon  
-Font Awesome  
-FormSubmit  
+Google Fonts
+Bootstrap
+Devicon 
+Font Awesome
+FormSubmit
 Figma
 
 
