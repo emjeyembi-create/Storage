@@ -40,7 +40,7 @@ FormSubmit email handling
 
 Contact
 Name: Mark Joseph Marcelo Balatbat  
-Email: mjbalatbat23-1823@cca.edu.ph / emjeyembi@gmail.com  
+Email: emjeyembi@gmail.com  
 Instagram: https://www.instagram.com/_kensh.dev/  
 Facebook: https://www.facebook.com/emjeyembi2113
 
