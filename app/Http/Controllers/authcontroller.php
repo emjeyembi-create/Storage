@@ -9,37 +9,63 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    function showRegister(){return view('authentication.register');}
-    function register(Request $request)
+    // Optional: guests see login/register; auth required for logout
+    public function __construct()
+    {
+        $this->middleware('guest')->except(['logout']);
+    }
+
+    public function showRegister()
+    {
+        return view('Authentication.register'); // matches your folder name
+    }
+
+    public function register(Request $request)
     {
         $request->validate([
-            'name'      =>'required|string|max:255',
-            'email'     =>'required|email|max:100',
-            'password'  =>'required|min:5',
+            'name'      => 'required|string|max:255',
+            'email'     => 'required|email|max:100|unique:users,email',
+            'password'  => 'required|min:5',
         ]);
 
-        User::create([
-            'name' => $request->name,
-            'emai' => $request->email,
-            'password' =>$request->password,
+        $user = User::create([
+            'name'     => $request->name,
+            'email'    => $request->email,
+            'password' => Hash::make($request->password),
         ]);
-        return redirect()->route('login.form')->with('success','Registration Successful!');
 
-
+        return redirect()->route('login.form')->with('success', 'Registration Successful!');
     }
-    function showlogin(){return view('authentication.login');}
-    function login(request $request):
+
+    public function showLogin()
+    {
+        return view('Authentication.login'); // matches your folder name
+    }
+
+    public function login(Request $request)
     {
         $credentials = $request->validate([
-            'email'     =>'required|email',
-            'password'  =>'required'
+            'email'    => 'required|email',
+            'password' => 'required'
         ]);
-        if(Auth::attempt($credentials)){
+
+        if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard');
+            return redirect()->intended(route('dashboard'));
         }
+
         return back()->withErrors([
-            'email' -> 'invalid email/password!'
-        ]);
+            'email' => 'Invalid email/password!'
+        ])->onlyInput('email');
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login.form');
     }
 }
