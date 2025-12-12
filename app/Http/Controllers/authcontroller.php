@@ -3,62 +3,62 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class AuthController extends Controller
 {
-    // Optional: guests see login/register; auth required for logout
-    public function __construct()
-    {
-        $this->middleware('guest')->except(['logout']);
-    }
-
-    public function showRegister()
-    {
-        return view('Authentication.register'); // matches your folder name
-    }
-
-    public function register(Request $request)
-    {
-        $request->validate([
-            'name'      => 'required|string|max:255',
-            'email'     => 'required|email|max:100|unique:users,email',
-            'password'  => 'required|min:5',
-        ]);
-
-        $user = User::create([
-            'name'     => $request->name,
-            'email'    => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        return redirect()->route('login.form')->with('success', 'Registration Successful!');
-    }
-
+    // Show login form
     public function showLogin()
     {
-        return view('Authentication.login'); // matches your folder name
+        return view('Authentication.login');
     }
 
+    // Process login
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'email'    => 'required|email',
-            'password' => 'required'
+            'email' => ['required', 'email'],
+            'password' => ['required'],
         ]);
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended(route('dashboard'));
+            return redirect()->route('home');
         }
 
         return back()->withErrors([
-            'email' => 'Invalid email/password!'
-        ])->onlyInput('email');
+            'email' => 'Invalid credentials.'
+        ]);
     }
 
+    // Show register form
+    public function showRegister()
+    {
+        return view('Authentication.register');
+    }
+
+    // Process register
+    public function register(Request $request)
+    {
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:6|confirmed',
+        ]);
+
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+        ]);
+
+        Auth::login($user);
+
+        return redirect()->route('home');
+    }
+
+    // Logout
     public function logout(Request $request)
     {
         Auth::logout();
@@ -66,6 +66,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('login.form');
+        return redirect()->route('login');
     }
 }
